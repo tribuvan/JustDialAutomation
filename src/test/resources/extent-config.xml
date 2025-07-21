@@ -1,0 +1,9 @@
+<extentreports>
+    <configuration>
+        <encoding>utf-8</encoding>
+        <theme>standard</theme> <!-- or dark -->
+        <documentTitle>Justdial Automation Report</documentTitle>
+        <reportName>Justdial Cucumber Framework</reportName>
+        <timelineEnabled>true</timelineEnabled>
+    </configuration>
+</extentreports>

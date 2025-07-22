@@ -30,7 +30,7 @@ public class ExcelDataProvider {
                 if (tcn.equalsIgnoreCase(testMethod.getName().toLowerCase()) && tcrunStatus.equalsIgnoreCase("Y")) {
                     ArrayList<String> allCellsData = new ArrayList<>();
                     //System.out.println(r.getPhysicalNumberOfCells());
-                    for (int eachCell = 4; eachCell < cellCount; eachCell++) {
+                    for (int eachCell = 4; eachCell < 4+testMethod.getParameterCount()-1; eachCell++) {
                         String celldata = r.getCell(eachCell).getStringCellValue();
                         allCellsData.add(celldata);
                     }

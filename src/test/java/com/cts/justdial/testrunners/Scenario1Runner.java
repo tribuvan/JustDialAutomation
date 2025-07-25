@@ -30,7 +30,7 @@ public class Scenario1Runner {
     CarWashServicesPage co = null;
     FreeListingPage fo = null;
     GymsPage go = null;
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void perSetup() throws Exception{
         String bn = null;
         String url = null;
@@ -52,7 +52,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 0, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 0,groups = {"Smoke","Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateHomePageTitle(String title,String rowNo){
         try {
             ho.closePopup(driver);
@@ -65,7 +65,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 1, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 1, groups = {"Smoke","Regression"},dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateLocation(String currentLocation,String rowNo){
         try {
             ho.closePopup(driver);
@@ -80,7 +80,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 2, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 2, groups = {"Smoke","Regression"},dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validatePageTitle(String location, String searchText,String pageTitle,String rowNo){
         try {
             ho.closePopup(driver);
@@ -97,7 +97,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 3, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 3, groups = {"Regression"},dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateIfAllFiltersIsEnabled(String location, String searchText,String rowNo){
         try {
             ho.closePopup(driver);
@@ -112,7 +112,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 4, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 4, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateFilterBox(String location, String searchText,String rowNo){
         try {
             ho.closePopup(driver);
@@ -127,7 +127,7 @@ public class Scenario1Runner {
             Assert.fail();
         }
     }
-    @Test(priority = 5, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 5, groups = {"Regression"},dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateTopRatedFilter(String location, String searchText,String rowNo){
         try {
             ho.closePopup(driver);
@@ -144,7 +144,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 6, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 6, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateRatingFilter(String location, String searchText,String rowNo){
         try {
             ho.closePopup(driver);
@@ -162,7 +162,7 @@ public class Scenario1Runner {
     }
 
 
-    @Test(priority = 7, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 7, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateListingSize(String location, String searchText,String num,String rowNo){
         try {
             ho.closePopup(driver);
@@ -181,7 +181,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 8, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 8, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateVotes(String location, String searchText,String minVote,String rowNo){
         try {
             ho.closePopup(driver);
@@ -200,7 +200,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 9, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 9, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateRating(String location, String searchText,String rating,String rowNo){
         try {
             ho.closePopup(driver);
@@ -219,7 +219,7 @@ public class Scenario1Runner {
         }
     }
 
-    @Test(priority = 10, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 10, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateGettingTop5Contacts(String location, String searchText,String noOfContacts,String rowNo){
         try {
             ho.closePopup(driver);
@@ -241,7 +241,7 @@ public class Scenario1Runner {
     }
 
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void terminate(){
         driver.close();
         driver.quit();

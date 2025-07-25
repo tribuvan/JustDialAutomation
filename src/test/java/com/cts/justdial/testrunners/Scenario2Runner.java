@@ -27,7 +27,7 @@ public class Scenario2Runner {
     CarWashServicesPage co = null;
     FreeListingPage fo = null;
     GymsPage go = null;
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void perSetup() throws Exception{
         String bn = null;
         String url = null;
@@ -50,7 +50,7 @@ public class Scenario2Runner {
         }
     }
 
-    @Test(priority = 0, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 0, groups = {"Smoke","Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void openFreeListingPage(String title,String rowNo){
         try {
             ho.closePopup(driver);
@@ -64,7 +64,7 @@ public class Scenario2Runner {
         }
     }
 
-    @Test(priority = 1, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 1, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateEmptyInput(String rowNo){
         try {
             ho.closePopup(driver);
@@ -78,7 +78,7 @@ public class Scenario2Runner {
         }
     }
 
-    @Test(priority = 2, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 2, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateAplhabeticInput(String str,String rowNo){
         try {
             ho.closePopup(driver);
@@ -92,7 +92,7 @@ public class Scenario2Runner {
         }
     }
 
-    @Test(priority = 3, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 3, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateSpecialCharInput(String str,String rowNo){
         try {
             ho.closePopup(driver);
@@ -106,7 +106,7 @@ public class Scenario2Runner {
         }
     }
 
-    @Test(priority = 4, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 4, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateShortNumberInput(String num,String rowNo){
         try {
             ho.closePopup(driver);
@@ -120,7 +120,7 @@ public class Scenario2Runner {
         }
     }
 
-    @Test(priority = 5, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 5, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateLongNumberInput(String num,String rowNo){
         try {
             ho.closePopup(driver);
@@ -134,7 +134,7 @@ public class Scenario2Runner {
         }
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void terminate(){
         driver.close();
         driver.quit();

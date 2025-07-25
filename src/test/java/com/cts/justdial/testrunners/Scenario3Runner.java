@@ -30,7 +30,7 @@ public class Scenario3Runner {
     CarWashServicesPage co = null;
     FreeListingPage fo = null;
     GymsPage go = null;
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void perSetup() throws Exception{
         String bn = null;
         String url = null;
@@ -52,7 +52,7 @@ public class Scenario3Runner {
         }
     }
 
-    @Test(priority = 0, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 0, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateGymsOption(String rowNo){
         try {
             ho.closePopup(driver);
@@ -66,7 +66,7 @@ public class Scenario3Runner {
         }
     }
 
-    @Test(priority = 1, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 1, groups = {"Smoke","Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateGymPageTitle(String location, String pageTitle,String rowNo){
         try {
             ho.closePopup(driver);
@@ -83,7 +83,7 @@ public class Scenario3Runner {
         }
     }
 
-    @Test(priority = 2, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
+    @Test(priority = 2, groups = {"Regression"}, dataProvider = "carWashTestData",dataProviderClass = ExcelDataProvider.class)
     public void validateGyms(String location,String rowNo){
         try {
             ho.closePopup(driver);
@@ -100,7 +100,7 @@ public class Scenario3Runner {
             Assert.fail();
         }
     }
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void terminate(){
         driver.close();
         driver.quit();

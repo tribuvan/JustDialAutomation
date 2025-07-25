@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="111.855" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-07-25T13:00:38.739299300Z">
+<testcase classname="Car Wash Services Feature" name="TC_01_01 - Validate Home Page Title" time="19.011">
+<system-out><![CDATA[
+Given User is on the Justdial Home Page.....................................passed
+Given I load test data for "TC_01_01".......................................passed
+Then Verify the home page title.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Car Wash Services Feature" name="TC_01_02 - Validate Current Location" time="17.701">
+<system-out><![CDATA[
+Given User is on the Justdial Home Page.....................................passed
+Given I load test data for "TC_01_02".......................................passed
+When User sets location to Hyderabad........................................passed
+Then Verify selected location is Hyderabad..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Car Wash Services Feature" name="TC_01_03 - Validate Car Wash Services Page Title" time="28.518">
+<system-out><![CDATA[
+Given User is on the Justdial Home Page.....................................passed
+Given I load test data for "TC_01_03".......................................passed
+When User sets location to Hyderabad........................................passed
+And User searches for service Car Wash Services.............................passed
+Then Verify the car wash page title.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Free Listing Feature" name="TC_02_01 - Open Free Listing Page" time="21.492">
+<system-out><![CDATA[
+Given User is on the Justdial Home Page.....................................passed
+Given I load test data for "TC_02_01".......................................passed
+When User clicks on Free Listing option.....................................passed
+Then Verify Free Listing page title.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Gyms Feature" name="TC_03_01 - Validate Gyms Option" time="24.639">
+<system-out><![CDATA[
+Given User is on the Justdial Home Page.....................................passed
+Given I load test data for "TC_03_01".......................................passed
+When User navigates to the Gyms section.....................................passed
+And User clicks fitness option button.......................................passed
+Then Validate that Gyms option is clickable.................................passed
+]]></system-out>
+</testcase>
+</testsuite>

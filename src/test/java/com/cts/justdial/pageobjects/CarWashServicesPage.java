@@ -15,7 +15,7 @@ public class CarWashServicesPage extends BasePage {
 
     public CarWashServicesPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver, this);//to initialize all the elements
     }
 
     @FindBy(xpath = "//span[@id='all_filters_btn']")
@@ -90,7 +90,7 @@ public class CarWashServicesPage extends BasePage {
 
     public boolean ratingGreaterThan(WebDriver driver,double rating){
         for(int i=0;i<Math.min(listings.size(), 5);i++) {
-            // Extract votes and check if > 20
+            // Extract ratings and check if > 4
             String votesText = ratingList.get(i).getText().split(" ")[0];
             double votes = Double.parseDouble(votesText);
             if (votes <= rating) {

@@ -17,14 +17,19 @@ public class BrowserFactory {
     private static WebDriver driver;
     private static WebDriver runLocal(String bname,String url){
         ChromeOptions options = new ChromeOptions();
+        //Removes the "enable-automation" switch, which is usually present in browsers launched by Selenium. This helps avoid detection by websites that block bots.
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        //Disables the Selenium automation extension, another fingerprint websites use to detect automation.
         options.setExperimentalOption("useAutomationExtension", false);
+        //Disables certain Blink features (Chrome's rendering engine) that reveal automation control.
         options.addArguments("--disable-blink-features=AutomationControlled");
+        //Disables certain Blink features (Chrome's rendering engine) that reveal automation control.
         options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                 + "(KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36");
         //Set geolocation permission to "allow"
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("profile.default_content_setting_values.geolocation", 2); // 1 = Allow, 2 = Block
+        //to block notifications
         prefs.put("profile.default_content_setting_values.notifications", 2);
         options.setExperimentalOption("prefs", prefs);
         options.addArguments("--disable-notifications");

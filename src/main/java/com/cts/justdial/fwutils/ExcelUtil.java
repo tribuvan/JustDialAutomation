@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcelUtil {
-
+    //method to write in excel from a Map data structure
     public static void writeMapToExcel(Map<String, String> dataMap, String keyColName, String valueColName, int keyColNo, int valueColNo,String fileName) {
         File filePath = new File("testdata/"+fileName);
         XSSFWorkbook wb;
@@ -60,7 +60,7 @@ public class ExcelUtil {
             e.printStackTrace();
         }
     }
-
+    //method to write in excel from a list
     public static void writeListToExcel(List<WebElement> data, String colName, int colNo, String fileName) {
         File filePath = new File("testdata/"+fileName);
         XSSFWorkbook wb;
@@ -96,7 +96,7 @@ public class ExcelUtil {
             e.printStackTrace();
         }
     }
-
+    //method to write pass or fail status in the test case data excel
     public static void writeResult(String status, int rowNum) {
         try (FileInputStream file = new FileInputStream("testdata/"+PropertiesFileReader.getPropertyValue("config","testdata"))) {
             XSSFWorkbook wb = new XSSFWorkbook(file);
@@ -104,7 +104,7 @@ public class ExcelUtil {
             XSSFRow row = sheet.getRow(rowNum);
             if (row == null) row = sheet.createRow(rowNum);
 
-            // Column L = 11 (0-indexed)
+            // Column is set as 7 since it is the status column no. in the test data excel
             XSSFCell statusCell = row.getCell(7);
             if (statusCell == null) {
                 statusCell = row.createCell(7);

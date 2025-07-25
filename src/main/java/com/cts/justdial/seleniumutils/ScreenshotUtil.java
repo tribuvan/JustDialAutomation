@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import java.io.File;
 
 public class ScreenshotUtil {
+    //method to take screenshot of a webelement and store it in the screenshots folder
     public static void takeScreenshot(WebElement element){
         TakesScreenshot tss = (TakesScreenshot) element;
         File src = tss.getScreenshotAs(OutputType.FILE);
@@ -20,6 +21,7 @@ public class ScreenshotUtil {
             e.printStackTrace();
         }
     }
+    //method to take screenshot using a driver which will take the screenshot of the visible section of the page
     public static void takeScreenshot(WebDriver driver)
     {
         TakesScreenshot tss = (TakesScreenshot) driver;
@@ -31,7 +33,7 @@ public class ScreenshotUtil {
             e.printStackTrace();
         }
     }
-
+    //this method is used to take screenshot if a test case is failed
     public static String takeScreenShot(WebDriver driver, String testName){
         TakesScreenshot tss = (TakesScreenshot) driver;
         File src = tss.getScreenshotAs(OutputType.FILE);

@@ -3,7 +3,7 @@ package com.cts.justdial.pageobjects;
 import io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.Serializers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+//this class contains all the common methods for all the pages
 abstract public class BasePage {
     WebDriver driver;
     protected BasePage(WebDriver driver){

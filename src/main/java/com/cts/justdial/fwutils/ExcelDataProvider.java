@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcelDataProvider {
+    //Data Provider code to read test case data from excel in TestNG framework.
     @DataProvider(name = "carWashTestData")
     public static String[][] getData(Method testMethod) {
         ArrayList<String[]> allRowsTestData = new ArrayList<>();
@@ -46,6 +47,7 @@ public class ExcelDataProvider {
 
     }
 
+    //method to read test case data in BDD framework
     public static Map<String, String> getTestData(String tcId) {
         Map<String, String> data = new HashMap<>();
         try {

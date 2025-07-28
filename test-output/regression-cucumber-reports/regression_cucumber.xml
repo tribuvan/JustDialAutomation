@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="407.908" tests="18" skipped="0" failures="0" errors="0" timestamp="2025-07-25T13:09:15.717869800Z">
-<testcase classname="Car Wash Services Feature" name="TC_01_01 - Validate Home Page Title" time="20.413">
+<testsuite name="Cucumber" time="560.808" tests="20" skipped="0" failures="0" errors="0" timestamp="2025-07-28T04:54:03.690494600Z">
+<testcase classname="Car Wash Services Feature" name="TC_01_01 - Validate Home Page Title" time="20.672">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_01".......................................passed
 Then Verify the home page title.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_02 - Validate Current Location" time="16.097">
+<testcase classname="Car Wash Services Feature" name="TC_01_02 - Validate Current Location" time="20.549">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_02".......................................passed
@@ -15,7 +15,7 @@ When User sets location to Hyderabad........................................pass
 Then Verify selected location is Hyderabad..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_03 - Validate Car Wash Services Page Title" time="21.756">
+<testcase classname="Car Wash Services Feature" name="TC_01_03 - Validate Car Wash Services Page Title" time="23.067">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_03".......................................passed
@@ -24,7 +24,7 @@ And User searches for service Car Wash Services.............................pass
 Then Verify the car wash page title.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_04 - Validate if All Filters is Enabled" time="20.362">
+<testcase classname="Car Wash Services Feature" name="TC_01_04 - Validate if All Filters is Enabled" time="28.346">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_04".......................................passed
@@ -33,7 +33,7 @@ And User searches for service Car Wash Services.............................pass
 Then Verify that All Filters option is enabled..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_05 - Validate Filter Box is Displayed" time="20.98">
+<testcase classname="Car Wash Services Feature" name="TC_01_05 - Validate Filter Box is Displayed" time="24.063">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_05".......................................passed
@@ -42,7 +42,7 @@ And User searches for service Car Wash Services.............................pass
 Then Verify filter box is displayed.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_06 - Validate Top Rated Filter" time="20.574">
+<testcase classname="Car Wash Services Feature" name="TC_01_06 - Validate Top Rated Filter" time="25.69">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_06".......................................passed
@@ -53,7 +53,7 @@ And User selects Top Rated filter button....................................pass
 Then Verify Top Rated filter can be applied.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_07 - Validate Rating Filter" time="20.668">
+<testcase classname="Car Wash Services Feature" name="TC_01_07 - Validate Rating Filter" time="29.947">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_07".......................................passed
@@ -64,7 +64,7 @@ And User selects 4.0+ Rating filter button..................................pass
 Then Verify 4.0+ rating filter can be applied...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_08 - Validate Listing Size Greater Than 5" time="20.796">
+<testcase classname="Car Wash Services Feature" name="TC_01_08 - Validate Listing Size Greater Than 5" time="32.449">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_08".......................................passed
@@ -76,7 +76,7 @@ And User selects 4.0+ Rating filter button..................................pass
 Then Verify there are more than 5 Car Wash Service listings.................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_09 - Validate Votes Greater Than 20" time="22.991">
+<testcase classname="Car Wash Services Feature" name="TC_01_09 - Validate Votes Greater Than 20" time="32.148">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_09".......................................passed
@@ -89,7 +89,7 @@ And User selects All Filter button..........................................pass
 Then Verify all listings have votes greater than 20.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_10 - Validate Rating Greater Than 4" time="23.192">
+<testcase classname="Car Wash Services Feature" name="TC_01_10 - Validate Rating Greater Than 4" time="27.248">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_10".......................................passed
@@ -102,7 +102,7 @@ And User selects All Filter button..........................................pass
 Then Verify all listings have ratings greater than 4........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Car Wash Services Feature" name="TC_01_11 - Validate Getting Top 5 Car Wash Contacts" time="42.348">
+<testcase classname="Car Wash Services Feature" name="TC_01_11 - Validate Getting Top 5 Car Wash Contacts" time="57.875">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_01_11".......................................passed
@@ -115,7 +115,15 @@ And User selects All Filter button..........................................pass
 Then Fetch top 5 car wash service contacts and save to Excel................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Free Listing Feature" name="TC_02_02 - Validate Empty Input Error Message" time="20.982">
+<testcase classname="Free Listing Feature" name="TC_02_01 - Open Free Listing Page" time="23.135">
+<system-out><![CDATA[
+Given User is on the Justdial Home Page.....................................passed
+Given I load test data for "TC_02_01".......................................passed
+When User clicks on Free Listing option.....................................passed
+Then Verify Free Listing page title.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Free Listing Feature" name="TC_02_02 - Validate Empty Input Error Message" time="27.551">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_02_02".......................................passed
@@ -123,7 +131,7 @@ When User clicks on Free Listing option.....................................pass
 Then Validate error message for empty input is "Please Enter a Mobile Number".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Free Listing Feature" name="TC_02_03 - Validate Alphabetic Input Error Message" time="17.824">
+<testcase classname="Free Listing Feature" name="TC_02_03 - Validate Alphabetic Input Error Message" time="29.438">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_02_03".......................................passed
@@ -131,7 +139,7 @@ When User clicks on Free Listing option.....................................pass
 Then Validate error message for alphabetic input is "Please Enter a Mobile Number".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Free Listing Feature" name="TC_02_04 - Validate Special Character Input Error Message" time="18.397">
+<testcase classname="Free Listing Feature" name="TC_02_04 - Validate Special Character Input Error Message" time="33.545">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_02_04".......................................passed
@@ -139,7 +147,7 @@ When User clicks on Free Listing option.....................................pass
 Then Validate error message for special character input is "Please Enter a Mobile Number".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Free Listing Feature" name="TC_02_05 - Validate Short Number Input Error Message" time="29.472">
+<testcase classname="Free Listing Feature" name="TC_02_05 - Validate Short Number Input Error Message" time="25.961">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_02_05".......................................passed
@@ -147,7 +155,7 @@ When User clicks on Free Listing option.....................................pass
 Then Validate error message for short number input is "Please Enter a Valid Mobile Number".passed
 ]]></system-out>
 </testcase>
-<testcase classname="Free Listing Feature" name="TC_02_06 - Validate OTP Popup For Long Number Input" time="24.576">
+<testcase classname="Free Listing Feature" name="TC_02_06 - Validate OTP Popup For Long Number Input" time="34.963">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_02_06".......................................passed
@@ -155,7 +163,16 @@ When User clicks on Free Listing option.....................................pass
 Then Validate OTP popup is displayed for long number input..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Gyms Feature" name="TC_03_02 - Validate Gym Page Title" time="21.842">
+<testcase classname="Gyms Feature" name="TC_03_01 - Validate Gyms Option" time="23.569">
+<system-out><![CDATA[
+Given User is on the Justdial Home Page.....................................passed
+Given I load test data for "TC_03_01".......................................passed
+When User navigates to the Gyms section.....................................passed
+And User clicks fitness option button.......................................passed
+Then Validate that Gyms option is clickable.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Gyms Feature" name="TC_03_02 - Validate Gym Page Title" time="20.569">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_03_02".......................................passed
@@ -164,7 +181,7 @@ And User navigates to the Gyms section......................................pass
 Then Verify Gyms page title.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Gyms Feature" name="TC_03_03 - Fetch All Gym Names and Save to Excel" time="24.258">
+<testcase classname="Gyms Feature" name="TC_03_03 - Fetch All Gym Names and Save to Excel" time="19.776">
 <system-out><![CDATA[
 Given User is on the Justdial Home Page.....................................passed
 Given I load test data for "TC_03_03".......................................passed

@@ -24,11 +24,11 @@ public class ActionsUtil {
     //method to press enter
     public static void pressEnter(WebDriver driver){
         Actions a = new Actions(driver);
-        a.keyDown(Keys.ENTER);
+        a.keyDown(Keys.ENTER).perform();
     }
     //method to scroll the page to till the webelement is visible.
     public static void scrollToElement(WebDriver driver,WebElement element){
         Actions a = new Actions(driver);
-        a.scrollToElement(element);
+        a.scrollToElement(element).perform();
     }
 }
